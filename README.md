@@ -10,7 +10,7 @@ Yuming Zhao · Junhui Hou · Qijian Zhang · Jia Qin · Ying He
 
 [![arXiv](https://img.shields.io/badge/arXiv-2606.02268-b31b1b.svg?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2606.02268)
 [![ICML 2026](https://img.shields.io/badge/ICML-2026-4b44ce.svg)](https://arxiv.org/abs/2606.02268)
-[![Hugging Face](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-weights%20%28coming%20soon%29-ffd21e.svg)](https://huggingface.co/AidenZhao/PRISM)
+[![Hugging Face](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-weights-ffd21e.svg)](https://huggingface.co/AidenZhaoy/PRISM)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 <br>
 [![Python](https://img.shields.io/badge/Python-3.10%2B-3776ab.svg?logo=python&logoColor=white)](https://www.python.org/)
@@ -30,7 +30,7 @@ PRISM learns point-cloud representations by predicting **geodesic distances** be
 ## News
 
 - **2026-10** — Released **PRISM v2**: a lighter anchor-attention backbone with lower error at every model size, plus the full data pipeline, training and evaluation code.
-- **Coming soon** — Pretrained PRISM v2 weights on [Hugging Face](https://huggingface.co/AidenZhao/PRISM).
+- **2026-10** — Pretrained PRISM v2 weights (S, B) on [Hugging Face](https://huggingface.co/AidenZhaoy/PRISM); L coming soon.
 
 ## Contents
 
@@ -93,13 +93,18 @@ v2 models: 8×H100, global batch 64, 1000 epochs (S 4.4 h, B 5.9 h, L ≈ 12 h).
 
 ## Pretrained models
 
-Weights will be released on [Hugging Face](https://huggingface.co/AidenZhao/PRISM).
+Weights are hosted on [Hugging Face](https://huggingface.co/AidenZhaoy/PRISM).
 
 | Model | Params | MRE (%) | Checkpoint |
 |---|---|---|---|
-| PRISM-S (v2) | 15.3M | 2.21 | coming soon |
-| PRISM-B (v2) | 61.2M | 1.60 | coming soon |
+| PRISM-S (v2) | 15.3M | 2.21 | [prism_S.pt](https://huggingface.co/AidenZhaoy/PRISM/resolve/main/prism_S.pt) |
+| PRISM-B (v2) | 61.2M | 1.60 | [prism_B.pt](https://huggingface.co/AidenZhaoy/PRISM/resolve/main/prism_B.pt) |
 | PRISM-L (v2) | 250.9M | TBD | coming soon |
+
+```python
+from huggingface_hub import hf_hub_download
+ckpt = hf_hub_download("AidenZhaoy/PRISM", "prism_B.pt")
+```
 
 ## Installation
 
