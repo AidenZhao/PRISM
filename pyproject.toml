@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "prism-geodesic"
+version = "2.0.0"
+description = "PRISM: geodesic-guided representation learning for 3D geometric data (official implementation)"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [
+    {name = "Yuming Zhao"}, {name = "Junhui Hou"}, {name = "Qijian Zhang"}, {name = "Jia Qin"}, {name = "Ying He"},
+]
+requires-python = ">=3.10"
+dependencies = [
+    "torch>=2.1",
+    "numpy",
+    "scipy",
+    "trimesh",
+]
+
+[project.urls]
+Homepage = "https://github.com/AidenZhao/PRISM"
+Paper = "https://arxiv.org/abs/2606.02268"
+
+[project.optional-dependencies]
+# ground-truth generation (watertight + remesh + exact MMP geodesics)
+data = ["mesh2sdf", "gpytoolbox", "pygeodesic"]
+comet = ["comet_ml"]
+dev = ["pytest"]
+
+[tool.setuptools.packages.find]
+include = ["prism*"]

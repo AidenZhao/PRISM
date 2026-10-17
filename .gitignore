@@ -1,0 +1,13 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.venv/
+runs/
+data/
+*.pt
+*.npz
+*.npy
+.pytest_cache/
+comet_key.txt
