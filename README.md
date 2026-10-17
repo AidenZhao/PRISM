@@ -19,7 +19,13 @@ Yuming Zhao · Junhui Hou · Qijian Zhang · Jia Qin · Ying He
 
 </div>
 
+<p align="center">
+  <img src="assets/overview.png" width="100%" alt="PRISM overview">
+</p>
+
 PRISM learns point-cloud representations by predicting **geodesic distances** between arbitrary pairs of points on the underlying surface, from the point cloud alone. This repository is the official implementation.
+
+<sub>Overview of PRISM as presented in the paper: an intrinsic geometry-aware foundation model trained with geodesic structure and geodesic prediction objectives, which benefits downstream tasks that need fine geometric details and high-level semantics. In PRISM v2 (this release) the Point Transformer V3 encoder is replaced by an anchor-attention transformer; see [Method](#method).</sub>
 
 ## News
 
