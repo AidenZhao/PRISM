@@ -1,8 +1,37 @@
+<div align="center">
+
 # PRISM
 
-**[ICML 2026]** Official implementation of **PRISM** — *From Extrinsic to Intrinsic: Geodesic-Guided Representation Learning for 3D Geometric Data* ([arXiv:2606.02268](https://arxiv.org/abs/2606.02268)).
+### From Extrinsic to Intrinsic: Geodesic-Guided Representation Learning for 3D Geometric Data
 
-PRISM learns point-cloud representations by predicting **geodesic distances** between arbitrary pairs of points on the underlying surface, from the point cloud alone.
+**ICML 2026**
+
+Yuming Zhao · Junhui Hou · Qijian Zhang · Jia Qin · Ying He
+
+[![arXiv](https://img.shields.io/badge/arXiv-2606.02268-b31b1b.svg?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2606.02268)
+[![ICML 2026](https://img.shields.io/badge/ICML-2026-4b44ce.svg)](https://arxiv.org/abs/2606.02268)
+[![Hugging Face](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-weights%20%28coming%20soon%29-ffd21e.svg)](https://huggingface.co/AidenZhao/PRISM)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+<br>
+[![Python](https://img.shields.io/badge/Python-3.10%2B-3776ab.svg?logo=python&logoColor=white)](https://www.python.org/)
+[![PyTorch](https://img.shields.io/badge/PyTorch-2.1%2B-ee4c2c.svg?logo=pytorch&logoColor=white)](https://pytorch.org/)
+[![GitHub stars](https://img.shields.io/github/stars/AidenZhao/PRISM?style=social)](https://github.com/AidenZhao/PRISM)
+
+</div>
+
+PRISM learns point-cloud representations by predicting **geodesic distances** between arbitrary pairs of points on the underlying surface, from the point cloud alone. This repository is the official implementation.
+
+## News
+
+- **2026-10** — Released **PRISM v2**: a lighter anchor-attention backbone with lower error at every model size, plus the full data pipeline, training and evaluation code.
+- **Coming soon** — Pretrained PRISM v2 weights on [Hugging Face](https://huggingface.co/AidenZhao/PRISM).
+
+## Contents
+
+- [PRISM v2: lighter and more accurate](#prism-v2-lighter-and-more-accurate)
+- [Method](#method) · [Results](#results) · [Pretrained models](#pretrained-models)
+- [Installation](#installation) · [Data](#data) · [Training](#training) · [Evaluation](#evaluation) · [Inference](#inference)
+- [Differences from the paper](#differences-from-the-paper) · [License](#license) · [Citation](#citation)
 
 ## PRISM v2: lighter and more accurate
 
@@ -55,6 +84,16 @@ MRE = mean `|pred − gt| / gt`; L1 = mean `|pred − gt|` with shapes normalize
 | L | **v2** | anchor attention | **250.9M** | *TBD* | *TBD* |
 
 v2 models: 8×H100, global batch 64, 1000 epochs (S 4.4 h, B 5.9 h, L ≈ 12 h).
+
+## Pretrained models
+
+Weights will be released on [Hugging Face](https://huggingface.co/AidenZhao/PRISM).
+
+| Model | Params | MRE (%) | Checkpoint |
+|---|---|---|---|
+| PRISM-S (v2) | 15.3M | 2.21 | coming soon |
+| PRISM-B (v2) | 61.2M | 1.60 | coming soon |
+| PRISM-L (v2) | 250.9M | TBD | coming soon |
 
 ## Installation
 
