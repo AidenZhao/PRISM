@@ -30,7 +30,7 @@ PRISM learns point-cloud representations by predicting **geodesic distances** be
 ## News
 
 - **2026-10** — Released **PRISM v2**: a lighter anchor-attention backbone with lower error at every model size, plus the full data pipeline, training and evaluation code.
-- **2026-10** — Pretrained PRISM v2 weights (S, B) on [Hugging Face](https://huggingface.co/AidenZhaoy/PRISM); L coming soon.
+- **2026-10** — Pretrained PRISM v2 weights (S, B, L) on [Hugging Face](https://huggingface.co/AidenZhaoy/PRISM).
 
 ## Contents
 
@@ -87,9 +87,9 @@ MRE = mean `|pred − gt| / gt`; L1 = mean `|pred − gt|` with shapes normalize
 | B | paper | PTv3 | 124M | 4.4 | 3.2 |
 | B | **v2** | anchor attention | **61.2M** | **1.60** | **1.87** |
 | L | paper | PTv3 | 494M | 3.9 | 2.8 |
-| L | **v2** | anchor attention | **250.9M** | *TBD* | *TBD* |
+| L | **v2** | anchor attention | **250.9M** | **1.36** | **1.64** |
 
-v2 models: 8×H100, global batch 64, 1000 epochs (S 4.4 h, B 5.9 h, L ≈ 12 h).
+v2 models: 8×H100, global batch 64, 1000 epochs (S 4.4 h, B 5.9 h, L 13.5 h).
 
 ## Pretrained models
 
@@ -99,7 +99,7 @@ Weights are hosted on [Hugging Face](https://huggingface.co/AidenZhaoy/PRISM).
 |---|---|---|---|
 | PRISM-S (v2) | 15.3M | 2.21 | [prism_S.pt](https://huggingface.co/AidenZhaoy/PRISM/resolve/main/prism_S.pt) |
 | PRISM-B (v2) | 61.2M | 1.60 | [prism_B.pt](https://huggingface.co/AidenZhaoy/PRISM/resolve/main/prism_B.pt) |
-| PRISM-L (v2) | 250.9M | TBD | coming soon |
+| PRISM-L (v2) | 250.9M | 1.36 | [prism_L.pt](https://huggingface.co/AidenZhaoy/PRISM/resolve/main/prism_L.pt) |
 
 ```python
 from huggingface_hub import hf_hub_download
